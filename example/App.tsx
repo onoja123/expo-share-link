@@ -26,20 +26,23 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Text style={styles.heading}>expo-share-link</Text>
-      <Text style={styles.body}>Share sheet available: {String(isAvailable())}</Text>
-      <View style={styles.buttons}>
-        <Button title="Share with title and icon" onPress={() => share(true)} />
-        <Button title="Share with title only" onPress={() => share(false)} />
+      <View style={styles.content}>
+        <Text style={styles.heading}>expo-share-link</Text>
+        <Text style={styles.body}>Share sheet available: {String(isAvailable())}</Text>
+        <View style={styles.buttons}>
+          <Button title="Share with title and icon" onPress={() => share(true)} />
+          <Button title="Share with title only" onPress={() => share(false)} />
+        </View>
+        {result ? <Text style={styles.body}>Result: {JSON.stringify(result)}</Text> : null}
+        {error ? <Text style={[styles.body, styles.error]}>Error: {error}</Text> : null}
       </View>
-      {result ? <Text style={styles.body}>Result: {JSON.stringify(result)}</Text> : null}
-      {error ? <Text style={[styles.body, styles.error]}>Error: {error}</Text> : null}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, padding: 24, gap: 16, justifyContent: 'center', backgroundColor: '#fff' },
+  screen: { flex: 1, backgroundColor: '#fff' },
+  content: { flex: 1, padding: 24, gap: 16, justifyContent: 'center' },
   heading: { fontSize: 28, fontWeight: '700' },
   body: { fontSize: 16 },
   error: { color: '#c00' },

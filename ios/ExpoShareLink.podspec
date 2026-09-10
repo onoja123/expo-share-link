@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.author         = package['author']
   s.homepage       = package['homepage']
   s.platforms      = {
-    :ios => '16.4',
-    :tvos => '16.4'
+    :ios => '15.1',
+    :tvos => '15.1'
   }
   s.source         = { git: 'https://github.com/onoja123/expo-share-link.git', tag: "v#{s.version}" }
   s.static_framework = true
