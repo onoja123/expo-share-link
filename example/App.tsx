@@ -2,7 +2,7 @@ import { isAvailable, shareLink, type ShareLinkResult } from 'expo-share-link';
 import { useState } from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
-const URL = 'https://github.com/onoja123/expo-share-link';
+const URL = 'https://example.com/book/jane';
 
 export default function App() {
   const [result, setResult] = useState<ShareLinkResult | null>(null);
@@ -14,9 +14,9 @@ export default function App() {
       setResult(
         await shareLink({
           url: URL,
-          title: 'expo-share-link on GitHub',
+          title: 'Book with Jane',
           icon: withIcon ? require('./assets/icon.png') : undefined,
-          dialogTitle: 'Share this repo',
+          dialogTitle: 'Share booking page',
         })
       );
     } catch (e) {

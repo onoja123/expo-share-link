@@ -6,9 +6,9 @@ Share a link from an Expo app with a **title and icon in the share sheet header*
 [![CI](https://github.com/onoja123/expo-share-link/actions/workflows/ci.yml/badge.svg)](https://github.com/onoja123/expo-share-link/actions/workflows/ci.yml)
 [![license](https://img.shields.io/npm/l/expo-share-link.svg)](./LICENSE)
 
-| Before, `Share.share({ message: url, url })`                                              | After, `shareLink({ url, title, icon })`                                                             |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| ![iOS share sheet header reading "2 Links" with a generic site icon](docs/before-ios.png) | ![iOS share sheet header showing the app icon and a custom title above the link](docs/after-ios.png) |
+| Before, `Share.share({ message: url, url })`                                                 | After, `shareLink({ url, title, icon })`                                                             |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| ![iOS share sheet header reading "2 Links" with a generic compass icon](docs/before-ios.png) | ![iOS share sheet header showing the app icon and a custom title above the link](docs/after-ios.png) |
 
 Both screenshots come from the example app in this repo.
 
