@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoShareLinkModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.sharelink.ExpoShareLinkModule"]
+  }
+}
